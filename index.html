@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Unicode</title>    
+    <link rel="stylesheet" href="assets/css/nexon.sub.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/lib/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
+    <script type="text/javascript" src="assets/js/unicode.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="page-title">Convert Unicode</h1>
+        <nav>
+            <button type="button" class="toggle-nav"><span><i class="ir">Toggle Menu</i></span></button>
+            <div class="nav-wrap">
+                <h2>MENU</h2>                
+                <ul>
+                    <li><a href="index.html" class="active">유니코드 변환</a></li>
+                    <li><a href="unicoderange.html">유니코드 구간설정</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="btn-wrap convert-type">
+                <span class="type-btn"><input type="radio" id="typeA" name="inputType" value="0" checked /><label for="typeA">Unicode to Text</label></span>
+                <span class="type-btn"><input type="radio" id="typeB" name="inputType" value="1" /><label for="typeB">Text to Unicode</label></span>
+            </div>
+            <div class="search-wrap search-unicode">
+                <input type="text" class="codeList" />
+                <button type="button" class="btn-search btnConvert">변환</button>
+            </div>
+            <p class="example">
+                <span class="on">ex) U+AC00 or U+AC00-AC05 or U+AC00, U+AC05-AC0F</span>
+                <span>ex) ㄱ or 가 or 가나다라마AbcdEF</span>
+            </p>
+            <div class="output-area"></div>
+        </div>
+    </div>
+</body>
