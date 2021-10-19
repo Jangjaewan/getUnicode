@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Webfont Previewer</title>
+    <link rel="stylesheet" href="/getUnicode/assets/lib/jquery-ui-1.11.4/jquery-ui.css">
+    <link rel="stylesheet" href="/getUnicode/assets/css/nexon.sub.min.css">
+    <link rel="stylesheet" href="/getUnicode/assets/css/common.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/getUnicode/assets/lib/jquery-ui-1.11.4/jquery-ui.js"></script>    
+    <script type="text/javascript" src="/getUnicode/assets/js/common.js"></script>
+    <script type="text/javascript" src="/getUnicode/assets/js/preview.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="page-title">Webfont Previewer</h1>
+        <nav>
+            <button type="button" class="toggle-nav"><span><i class="ir">Toggle Menu</i></span></button>
+            <div class="nav-wrap">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index.html">유니코드 변환</a></li>
+                    <li><a href="unicoderange.html">유니코드 구간설정</a></li>
+                    <li><a href="previewer.html" class="active">웹폰트 미리보기</a></li>                    
+                </ul>
+            </div>
+        </nav>
+        <div class="container preview-wrap">
+            <div class="preview-controller global">
+                <div class="controller-item">
+                    <label class="controller-name">size <input type="text" value="16px" /></label>
+                    <div class="controller-unit slider">
+                        <div class="ui-slider-handle"></div>
+                    </div>
+                </div>
+                <div class="controller-item">
+                    <label class="controller-name">line-height <input type="text" value="1.6" /></label>
+                    <div class="controller-unit slider">
+                        <div class="ui-slider-handle"></div>
+                    </div>
+                </div>
+                <div class="controller-item">
+                    <label class="controller-name">letter-spacing <input type="text" value="0" /></label>
+                    <div class="controller-unit slider">
+                        <div class="ui-slider-handle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-container">
+                <div class="preview-controller">
+                    <div class="controller-item">
+                        <label class="controller-name">font</label>
+                        <div class="controller-unit">
+                            <select class="ui-font-family">
+                                <option value="Gothic_A1" data-weight="100,200,300,400,500,600,700,800,900" selected="selected">고딕A1</option>
+                                <option value="NotoSansOTFkr" data-weight="100,200,300,400,500,700,900">노토산스 (OTF)</option>
+                                <option value="NotoSansTTFkr" data-weight="100,200,300,400,500,700,900">노토산스 (TTF)</option>
+                                <option value="Nexon-Gothic" data-weight="100,300,700">넥슨고딕</option>
+                                <option value="Nexon-Gothic-v2" data-weight="100,300,500,700">넥슨고딕2</option>
+                                <option value="GmarketSans" data-weight="100,300,700">G마켓 폰트</option>
+                                <option value="NIXGONFONTS" data-weight="100,300,700">닉스곤</option>
+                                <option value="NanumSquare" data-weight="100,300,700,800">나눔스퀘어</option>
+                                <option value="NanumSquareAc" data-weight="100,300,700,800">나눔스퀘어 Ac</option>
+                                <option value="IBMPlexSansKR" data-weight="100,200,300,400,500,600,700">IBMPIexSansKR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controller-item">
+                        <label class="controller-name">weight</label>
+                        <div class="controller-unit radioset">
+                            <input type="radio" id="radio1" name="weight1" value="100" checked="checked"><label for="radio1">100</label>
+                            <input type="radio" id="radio2" name="weight1" value="200"><label for="radio2">200</label>
+                            <input type="radio" id="radio3" name="weight1" value="300"><label for="radio3">300</label>
+                            <input type="radio" id="radio4" name="weight1" value="400"><label for="radio4">400</label>
+                            <input type="radio" id="radio5" name="weight1" value="500"><label for="radio5">500</label>
+                            <input type="radio" id="radio6" name="weight1" value="700"><label for="radio6">700</label>
+                            <input type="radio" id="radio7" name="weight1" value="900"><label for="radio7">900</label>
+                        </div>
+                    </div>
+                    <div class="controller-item global-text">
+                        <label class="controller-name">text</label>
+                        <div class="controller-unit">
+                            <input type="text" class="ui-preview-text" value="가까나다따라마바빠사싸아자짜차카타파하">
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-viewer">
+                    <p>가까나다따라마바빠사싸아자짜차카타파하</p>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p>abcdefghijklmnopqrstuvwxyz</p>
+                    <p>0123456789</p>
+                    <p>~@#%$^&*</p>
+                    <p>.,;:/\!?`'"‘’“”-_()[]{}<>></p>
+                </div>
+            </div>
+            <div class="preview-container">
+                <div class="preview-controller">
+                    <div class="controller-item">
+                        <label class="controller-name">font</label>
+                        <div class="controller-unit">
+                            <select class="ui-font-family">
+                                <option value="NotoSansOTFkr" data-weight="100,200,300,400,500,700,900" selected="selected">노토산스 (OTF)</option>
+                                <option value="NotoSansTTFkr" data-weight="100,200,300,400,500,700,900">노토산스 (TTF)</option>
+                                <option value="Nexon-Gothic" data-weight="100,300,700">넥슨고딕</option>
+                                <option value="Nexon-Gothic-v2" data-weight="100,300,500,700">넥슨고딕2</option>
+                                <option value="GmarketSans" data-weight="100,300,700">G마켓 폰트</option>
+                                <option value="NIXGONFONTS" data-weight="100,300,700">닉스곤</option>
+                                <option value="NanumSquare" data-weight="100,300,700,800">나눔스퀘어</option>
+                                <option value="NanumSquareAc" data-weight="100,300,700,800">나눔스퀘어 Ac</option>
+                                <option value="IBMPlexSansKR" data-weight="100,200,300,400,500,600,700">IBMPIexSansKR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="controller-item">
+                        <label class="controller-name">weight</label>
+                        <div class="controller-unit radioset">
+                            <input type="radio" id="radio2-1" name="weight2" value="100" checked="checked"><label for="radio2-1">100</label>
+                            <input type="radio" id="radio2-2" name="weight2" value="200"><label for="radio2-2">200</label>
+                            <input type="radio" id="radio2-3" name="weight2" value="300"><label for="radio2-3">300</label>
+                            <input type="radio" id="radio2-4" name="weight2" value="400"><label for="radio2-4">400</label>
+                            <input type="radio" id="radio2-5" name="weight2" value="500"><label for="radio2-5">500</label>
+                            <input type="radio" id="radio2-6" name="weight2" value="700"><label for="radio2-6">700</label>
+                            <input type="radio" id="radio2-7" name="weight2" value="900"><label for="radio2-7">900</label>
+                        </div>
+                    </div>
+                    <div class="controller-item global-text">
+                        <label class="controller-name">text</label>
+                        <div class="controller-unit">
+                            <input type="text" class="ui-preview-text" value="가까나다따라마바빠사싸아자짜차카타파하">
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-viewer">
+                    <p>가까나다따라마바빠사싸아자짜차카타파하</p>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p>abcdefghijklmnopqrstuvwxyz</p>
+                    <p>0123456789</p>
+                    <p>~@#%$^&*</p>
+                    <p>.,;:/\!?`'"‘’“”-_()[]{}<>></p>
+                </div>
+            </div>
+
+            <!--
+                <div class="font-test-wrap row">
+                <div class="font-setting">
+                    <div class="font-controller">
+                        <strong>font-family</strong>
+                        <select class="ui-font-family">
+                            <option value="NotoSansOTFkr" data-weight="100,200,300,400,500,700,900" selected="selected">노토산스 (OTF)</option>
+                            <option value="NotoSansTTFkr" data-weight="100,200,300,400,500,700,900">노토산스 (TTF)</option>
+                            <option value="Nexon-Gothic" data-weight="100,300,700">넥슨고딕</option>
+                            <option value="Nexon-Gothic-v2" data-weight="100,300,500,700">넥슨고딕2</option>
+                            <option value="GmarketSans" data-weight="100,300,700">G마켓 폰트</option>
+                            <option value="NIXGONFONTS" data-weight="100,300,700">닉스곤</option>
+                            <option value="NanumSquare" data-weight="100,300,700,800">나눔스퀘어</option>
+                            <option value="NanumSquareAc" data-weight="100,300,700,800">나눔스퀘어 Ac</option>
+							<option value="IBMPlexSansKR" data-weight="100,200,300,400,500,600,700">IBMPIexSansKR</option>
+                        </select>
+                    </div>
+                    <div class="font-controller">
+                        <strong>font-weight</strong>
+                        <div id="radioset">
+                            <input type="radio" id="radio1" name="weight" value="100"><label for="radio1">100</label>
+                            <input type="radio" id="radio2" name="weight" value="200"><label for="radio2">200</label>
+                            <input type="radio" id="radio3" name="weight" value="300" checked="checked"><label for="radio3">300</label>
+                            <input type="radio" id="radio4" name="weight" value="400"><label for="radio4">400</label>
+                            <input type="radio" id="radio5" name="weight" value="500"><label for="radio5">500</label>
+                            <input type="radio" id="radio6" name="weight" value="700"><label for="radio6">700</label>
+                            <input type="radio" id="radio7" name="weight" value="900"><label for="radio7">900</label>
+                        </div>
+                    </div>
+                    <div class="font-controller">
+                        <strong>font-size <span></span></strong>
+                        <div class="slider"><div class="ui-slider-handle"></div></div>
+                    </div>
+                    <div class="font-controller">
+                        <strong>line-height <span></span></strong>
+                        <div class="slider"><div class="ui-slider-handle"></div></div>
+                    </div>
+                </div>
+                <div class="previewer-wrap">
+                    <div class="previewer">
+                        <p>가까나다따라마바빠사싸아자짜차카타파하</p>
+                        <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                        <p>abcdefghijklmnopqrstuvwxyz</p>
+                        <p>0123456789</p>
+                        <p>~@#%$^&*</p>
+                        <p>.,;:/\!?`'"‘’“”-_()[]{}<>></p>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+
+    //]]>
+    </script>
+</body>
+</html>

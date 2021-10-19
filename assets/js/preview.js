@@ -36,7 +36,7 @@
         }).on("focusin",".global-text input",function(){
             _this.$defaultText = $(this).val();
             $(this).val('');
-        }).on("focusout",".global-text input",function(){            
+        }).on("focusout",".global-text input",function(){
             if(!$(this).val()){
                 $(this).val(_this.$defaultText)
             }else{
@@ -49,10 +49,10 @@
         var selectedOption = this.$selectedFont.find("option:selected");
         var selectedValue = selectedOption.val();
         var selectedData = selectedOption.data("weight").split(",");
-        var addStyleLink = '<link rel="stylesheet" href="buildFonts/output/kr/'+selectedValue+'/'+selectedValue+'.css">';
+        var addStyleLink = '<link rel="stylesheet" href="/fonts/kr/'+selectedValue+'/'+selectedValue+'.css">';
         var addRadioList = '';
         if(this.$options.type == 'short'){
-            var addSizeOption = selectedData.concat(this.$options.size);            
+            var addSizeOption = selectedData.concat(this.$options.size);
             var $textBox = this.$controls.find('.global-text');
             var $txt = $textBox.find('input').val();
             this.$viewbox.addClass('type-short');
